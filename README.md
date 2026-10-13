@@ -10,7 +10,7 @@ The form collects the user's name, email address, website, comment, and gender. 
 
 - **HTML:** Creates the signup form.
 - **PHP:** Processes the submitted form data.
-- **MySQL:** Stores the submitted information.
+- **mardb:** Stores the submitted information.
 - **MySQLi:** Connects PHP to the MySQL database.
 - **PM2 (optional):** Can manage a PHP development-server process in the background.
 
