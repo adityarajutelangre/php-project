@@ -16,40 +16,8 @@ The form collects the user's name, email address, website, comment, and gender. 
 
 ## 2. Architecture Diagram
 
-```text
-+---------------------------+
-|       User / Browser      |
-+-------------+-------------+
-              |
-              | Enters signup details
-              v
-+---------------------------+
-|       signup.html         |
-|  HTML Signup Form         |
-+-------------+-------------+
-              |
-              | HTTP POST
-              v
-+---------------------------+
-|        submit.php         |
-|  Reads and processes data |
-+-------------+-------------+
-              |
-              | MySQLi connection
-              v
-+---------------------------+
-|       MySQL Database      |
-|       Database: FCT       |
-|       Table: users        |
-+-------------+-------------+
-              |
-              | Query result
-              v
-+---------------------------+
-| Browser Result Page       |
-| Success message or error  |
-+---------------------------+
-```
+<img width="1195" height="673" alt="arc" src="https://github.com/user-attachments/assets/64b4279e-48d9-4b6d-90e9-abea0f4db818" />
+
 
 ## 3. Input
 
@@ -65,13 +33,8 @@ The user enters the following information in the signup form:
 
 ### Example Input
 
-```text
-Name: Aditya
-Email: aditya@example.com
-Website: https://example.com
-Comment: I am interested in this service.
-Gender: Male
-```
+
+<img width="1920" height="1080" alt="Screenshot 2026-10-13 160330" src="https://github.com/user-attachments/assets/e4cbf9b9-f890-4eba-94d8-049bfaed5ebd" />
 
 The form sends the data to `submit.php` using the HTTP `POST` method.
 
@@ -103,10 +66,7 @@ pm2 stop php-signup
 
 Open the application at:
 
-```text
-http://127.0.0.1:8000/signup.html
-```
-
+http://34.228.188.182/php-project/submit.php
 **Note:** PM2 must be installed separately. The PHP command must be available in your system's PATH. For production, use a suitable web server such as Apache or Nginx with PHP configured.
 
 ## 5. Output
@@ -114,17 +74,9 @@ http://127.0.0.1:8000/signup.html
 ### Successful Output
 
 If the database connection and insert query succeed, the browser displays:
+<img width="1920" height="1080" alt="Screenshot 2026-10-13 160731" src="https://github.com/user-attachments/assets/29d68a76-32d0-4611-a067-171f61f2d83c" />
 
-```text
-✅ New record created successfully!
 
-Submitted Information:
-- Name: Aditya
-- Email: aditya@example.com
-- Website: https://example.com
-- Comment: I am interested in this service.
-- Gender: Male
-```
 
 The example above illustrates the expected output; actual values depend on the form submission.
 
@@ -145,10 +97,10 @@ Columns: name, email, website, comment, gender
 Example table creation SQL:
 
 ```sql
-CREATE DATABASE IF NOT EXISTS FCT;
+CREATE DATABASE IF  FCT;
 USE FCT;
 
-CREATE TABLE IF NOT EXISTS users (
+CREATE TABLE  users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     email VARCHAR(255) NOT NULL,
