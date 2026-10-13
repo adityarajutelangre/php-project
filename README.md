@@ -2,7 +2,7 @@
 
 ## 1. Introduction
 
-This project is a simple signup form developed using **HTML, PHP, and MySQL**. It collects user information through a web form and submits the information to a PHP script. The PHP script connects to the MySQL database and attempts to insert the submitted details into the `users` table.
+This project is a simple signup form developed using **HTML, PHP, and MARADB**. It collects user information through a web form and submits the information to a PHP script. The PHP script connects to the MySQL database and attempts to insert the submitted details into the `users` table.
 
 The form collects the user's name, email address, website, comment, and gender. After submission, the page displays a success message and the submitted information if the database query succeeds.
 
